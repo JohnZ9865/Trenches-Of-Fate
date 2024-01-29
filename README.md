@@ -1,5 +1,7 @@
  > Authors: \<[Franklyn Lu](https://github.com/FranklynLu)\>
 
+## Project Name: Trenches of Fate: A WWI Story Adventure Game
+
 ## Project Description
 > Our project, "Trenches of Fate," is a text-based story game set in the grim backdrop of World War I. Players take on the role of an ordinary German soldier, grappling with battle fatigue, who is compelled by their lieutenant to charge over the top and navigate the treacherous French trenches. The game unfolds as the player attempts to survive this harrowing ordeal, with every decision impacting the storyline.
 
