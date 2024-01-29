@@ -1,10 +1,10 @@
  > As you complete each section you **must** remove the prompt text. Every *turnin* of this project includes points for formatting of this README so keep it clean and keep it up to date. 
  > Prompt text is any lines beginning with "\>"
  > Replace anything between \<...\> with your project specifics and remove angle brackets. For example, you need to name your project and replace the header right below this line with that title (no angle brackets). 
-# \<Project title\>
+# \<Trenches of Fate: A WWI Story Adventure Game\>
  > Your author list below should include links to all members GitHub (remove existing author).
  
- > Authors: \<[Jeffrey McDaniel](https://github.com/jmcda001)\>
+ > Authors: \<[Jeffrey McDaniel](https://github.com/jmcda001)\> \<[Franklyn Lu](https://github.com/flu018)\>
 
  > You will be forming a group of **FOUR** students and working on an interesting project. The project has 4 phases, each one with specific requirements. A list of proposed project ideas that have been successful in previous quarters is listed in the project specifications document on Canvas. You can select an idea from the list and start thinking about the features you will implement. If you want to propose your own original idea, you will have to contact your instructor to discuss the project and obtain written permission before you submit your project proposal (Phase 1). The project work should be divided almost equally among team members. You can of course help each other, but it needs to be clear who will be responsible for which features. Additionally, you are expected to follow Scrum patterns, specifically the use of a Scrum (Project) board, Sprints, and Scrum meetings.
 
@@ -24,6 +24,22 @@
  > This description should be in enough detail that the TA/instructor can determine the complexity of the project and if it is sufficient for the team members to complete in the time allotted. 
  > 
  > You also need to set up an empty project board using GitHub projects (board view with default columns). Make sure you add the board under your project repository. You should also have a Product Backlog and In testing columns added. All columns should be in the right order.
+
+## Project Description
+> stuff
+
+## Why is it important or interesting to you?
+> stuff
+
+## What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
+> stuff
+
+## What will be the input/output of your project?
+> stuff
+
+## What are the features that the project provides?
+> stuff
+
  > ## Phase II
  > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
  > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
