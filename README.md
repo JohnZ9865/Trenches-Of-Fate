@@ -1,4 +1,4 @@
- > Authors: \<[Franklyn Lu](https://github.com/FranklynLu)\>
+ > Authors: \<[Franklyn Lu](https://github.com/FranklynLu)\> \<[William Chen](https://github.com/William-xc)\> \<[Shiqi Zhou](https://github.com/JohnZ9865)\> \<[Stanley Xiao](https://github.com/stanleyx027)\> 
 
 ## Project Name: Trenches of Fate: A WWI Story Adventure Game
 
