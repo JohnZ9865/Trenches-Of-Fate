@@ -40,6 +40,7 @@
 
 ## Class Diagram
 > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from this template)
+> ![image](https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/9c88684c-fbe9-40cd-9980-3f6b0676097b)
 > 
 > Character class: Character class is a struct. All the ask functions which requests user input for character attributes like "askName", "askNationality", etc, are called in the constructor of the character. 
 > Graph class: Its a DAG that represents the storyline. It has a root member variable, which is a pointer which points to the start of the storyline, and a "curr" member variable, whihc is a pointer which points to the current Event in the story line. 
