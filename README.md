@@ -39,7 +39,12 @@
 > Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs and expected output, or any graphical user interface components if applicable (e.g. buttons, text boxes, etc). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
 
 ## Class Diagram
- > Include a **class diagram(s)** for your project and a **description** of the diagram(s). Your class diagram(s) should include all the main classes you plan for the project. This should be in sufficient detail that another group could pick up the project this point and successfully complete it. Use proper UML notation (as discussed in the course slides).
+> Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from this template)
+> 
+> Character class: Character class is a struct. All the ask functions which requests user input for character attributes like "askName", "askNationality", etc, are called in the constructor of the character. 
+> Graph class: Its a DAG that represents the storyline. It has a root member variable, which is a pointer which points to the start of the storyline, and a "curr" member variable, whihc is a pointer which points to the current Event in the story line. 
+> The Event class: The event class stores the text of event, and options which is a vector of pointers which points to the next events that could occur based off user decisions. runEvent() is the most important, it will display the text of the event, alongside the prompt of what options you can pick. It is called by runCurrentEvent of the graph class, and returns an integer corresponding to which option the user picked, so that the runCurrentEvent of the graph class can move the curr event pointer correctly.
+> Game Class: The game class contains the character and the storyline. To start a game, create the game object. The game object constructor will ask you for the difficulty of the game. Once that's done, startGame function can be called. The story line is hardcoded inside the "initializeStoryline" of the game class, with "initializeStoryline" called by the constructor. 
  
  > ## Phase III
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
