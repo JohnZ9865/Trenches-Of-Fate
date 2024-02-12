@@ -36,7 +36,21 @@
 > Draw a diagram illustrating how the user can navigate from one screen to another. Here is an [example](https://creately.com/diagram/example/ikfqudv82/user-navigation-diagram-classic?r=v). It can be useful to label each symbol that represents a screen so that you can reference the screens in the next section or the rest of the document if necessary. Give a brief description of what the diagram represents.
 
 ### Screen Layouts
-> Include the layout of each of your screens. The layout should describe the screen’s major components such as menus and prompts for user inputs and expected output, or any graphical user interface components if applicable (e.g. buttons, text boxes, etc). Explain what is on the layout, and the purpose of each menu item, button, etc. If many screens share the same layout, start by describing the general layout and then list the screens that will be using that layout and the differences between each of them.
+> Screen Layouts:
+Home (Start) Menu:
+Since our game is a terminal game, the Home/Start menu will show up in the terminal as a prompt, telling the player to start the game or to exit the game (press q to quit/exit, or press w to start). If the player press q, the expected output would be a message like “You have exited the game”. If the player press w, the expected output would either direct the user to character selection menu or the setting menu.
+
+Setting Menu: 
+The setting menu will allow the player to change difficulties. 
+
+Character Selection Menu:
+The player can either create a new character or select their saved character from before. After selecting which one (by entering an integer or a char), the player can play the game.
+
+Storytelling:
+This screen would start with a general storyline. Depending on the position/role from the character they have created, the player would have an unique storyline being outputted. The user enters a y or n when given an event to dictate what happens next in the game. 
+
+End game:
+The end game screen would output the end game message. 
 
 ## Class Diagram
 > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from this template)
