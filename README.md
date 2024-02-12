@@ -36,7 +36,6 @@
 > Draw a diagram illustrating how the user can navigate from one screen to another. Here is an [example](https://creately.com/diagram/example/ikfqudv82/user-navigation-diagram-classic?r=v). It can be useful to label each symbol that represents a screen so that you can reference the screens in the next section or the rest of the document if necessary. Give a brief description of what the diagram represents.
 
 ### Screen Layouts
-> Screen Layouts:
 Home (Start) Menu:
 Since our game is a terminal game, the Home/Start menu will show up in the terminal as a prompt, telling the player to start the game or to exit the game (press q to quit/exit, or press w to start). If the player press q, the expected output would be a message like “You have exited the game”. If the player press w, the expected output would either direct the user to character selection menu or the setting menu.
 
