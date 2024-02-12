@@ -1,10 +1,12 @@
 cmake_minimum_required(VERSION 3.10)
 project(MyCharacterProject)
 
-add_executable(
-    MyCharacterProject 
-    main.cpp 
-    character.cpp 
+add_executable(test_char
+    src/main_character.cpp 
+    src/character.cpp 
+    # test/test.cpp
 )
 
-target_include_directories(MyCharacterProject PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
+ADD_SUBDIRECTORY(test/googletest)
+TARGET_LINK_LIBRARIES(test_char gtest)
+TARGET_COMPILE_DEFINITIONS(test_char PRIVATE gtest_disable_pthreads=ON)

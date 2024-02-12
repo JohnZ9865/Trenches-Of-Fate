@@ -1,5 +1,8 @@
 // this file is to test the character functions
-#include "../header/character.h"
+#include "../lib/character.h"
+#include <iostream>
+#include <string>
+using namespace std;
 
 int main() {
     Character myCharacter;

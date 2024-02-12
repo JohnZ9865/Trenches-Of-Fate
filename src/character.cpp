@@ -1,7 +1,11 @@
-#include "../header/character.h"
+#include "../lib/character.h"
+#include <iostream>
+#include <string>
 using namespace std;
 
 Character::Character() : clout(0) {} // constructor
+
+// SETTERS
 
 void Character::gainClout() {
     clout += 1;
@@ -13,7 +17,9 @@ void Character::loseClout() {
 
 void Character::askName() { // does not affect gameplay
     cout << "Enter the character's name: " << endl;
-    cin >> name;
+    string name_input;
+    cin >> name_input;
+    name = name_input;
 }
 
 void Character::askGender() { // does not affect gameplay
@@ -21,6 +27,7 @@ void Character::askGender() { // does not affect gameplay
 
     while (!validInput) { 
         cout << "Enter your character's gender. Type M for male and F for female." << endl;
+        string gender_input;
         cin >> gender_input;
         if (gender_input == "M") {
             gender = gender_input;
@@ -41,6 +48,7 @@ void Character::askNationality() { // does not affect gameplay
 
     while (!validInput) { 
         cout << "Enter your character's nationality. Type R for Russian and B for British. *will add more choices later*" << endl;
+        string nationality_input;
         cin >> nationality_input;
         if (nationality_input == "R") {
             nationality = nationality_input;
@@ -60,8 +68,8 @@ void Character::askRank() {
     bool validInput = false;
 
     while (!validInput) { 
-        cout << "Enter your character's rank. 
-        Type P for private and I for lieutenant. *will add more choices later*" << endl;
+        cout << "Enter your character's rank. Type P for private and I for lieutenant. *will add more choices later*" << endl;
+        string rank_input;
         cin >> rank_input;
         if (rank_input == "P") {
             rank = rank_input;
@@ -81,9 +89,8 @@ void Character::askPosition() {
     bool validInput = false;
 
     while (!validInput) { 
-        cout << "Enter your character's position. 
-        Type A for artillery, I for infantry, S for sniper, 'Air' for air support, or O for officer. 
-        *will add more choices later*" << endl;
+        cout << "Enter your character's position. Type A for artillery, I for infantry, S for sniper, 'Air' for air support, or O for officer. *will add more choices later*" << endl;
+        string position_input;
         cin >> position_input;
         if (position_input == "A") {
             position = position_input;
@@ -116,6 +123,7 @@ void Character::askWeapon() {
 
     while (!validInput) { 
         cout << "Enter your character's weapon. Type S for sniper and A for artillery. *will add more choices later*" << endl;
+        string weapon_input;
         cin >> weapon_input;
         if (weapon_input == "S") {
             weapon = weapon_input;
@@ -140,6 +148,7 @@ void Character::askWeapon() {
 
         while (!validInput_2) { 
             cout << "Since your air support, type B for inaccurate big bombs and S for small accurate bombs" << endl;
+            string air_support_input;
             cin >> air_support_input;
             if (air_support_input == "B") {
                 air_support = air_support_input;
@@ -154,4 +163,34 @@ void Character::askWeapon() {
             }
         }
     }
+}
+
+// GETTERS
+
+int Character::getClout() {
+    return clout;
+}
+
+string Character::getName() {
+    return name;
+}
+
+string Character::getGender() {
+    return gender;
+}
+
+string Character::getNationality() {
+    return nationality;
+}
+
+string Character::getWeapon() {
+    return weapon;
+}
+
+string Character::getRank() {
+    return rank;
+}
+
+string Character::getPosition() {
+    return position;
 }
