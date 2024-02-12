@@ -35,6 +35,7 @@
 ### Navigation Diagram
 > Draw a diagram illustrating how the user can navigate from one screen to another. Here is an [example](https://creately.com/diagram/example/ikfqudv82/user-navigation-diagram-classic?r=v). It can be useful to label each symbol that represents a screen so that you can reference the screens in the next section or the rest of the document if necessary. Give a brief description of what the diagram represents.
 > ![image](https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/154624762/06974205-8231-4413-a487-45468227ee30)
+> The navigation diagram represent what a user could do when playing the game. It shows many interfaces the user can have as well.
 
 
 ### Screen Layouts
