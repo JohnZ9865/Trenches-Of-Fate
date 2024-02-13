@@ -2,9 +2,9 @@ cmake_minimum_required(VERSION 3.10)
 project(MyCharacterProject)
 
 add_executable(test_char
-    src/main_character.cpp 
+    # src/main_character.cpp 
     src/character.cpp 
-    # test/test.cpp
+    test/test.cpp
 )
 
 ADD_SUBDIRECTORY(test/googletest)
