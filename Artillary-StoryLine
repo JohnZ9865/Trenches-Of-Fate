@@ -1,0 +1,25 @@
+Part 1: It's the beginning of battle, and you are loading in shells in your cannon. As you are loading in the shells, a loud deafening sound and screams in the air.
+    Event: Do you quickly fire your cannon (a), or do you check if the mechanism is ready to fire (b)?
+        (a): The projectile has exploded, you and your fellow soldiers are dead. You are remembered as an idiotic soldier. Game over. Clout = 0
+        (b): Everything is loaded correctly, and you fire away. You hear screams on the enemy side of the field. Clout++ (Go to Part 2)
+
+Part 2: 1 hour has gone by, you hear some noise from a distance, and look up to see that the enemy are moving forward. They are bringing barricades, equipment, and weapons. 
+    Event: Do you fire your weapon at the incoming enemy (a), or do you decide not to worry about it (b)?
+        (a): Some of the enemy have been shot and later gunned down by your fellow comrades. You have prevented the enemy from moving forward. Enemies have noticed and retreated. Clout++ (Go to Part 3)
+        (b):  Enemies have moved up, which puts the front line at a disadvantage. You start cursing at your decision. Clout– (Go to Part 3)
+
+Part 3: 30 minutes has gone by after the previous encounter, you are scouting from your position, and notice that the enemy has charged the front line. 
+    Event: Do you run away as you are a pathetic coward (a), or do you charge in with your [weapon] to help out your fellow comrades (b)?
+        (a): Are you sure that you want to run away?
+            Yes: You ran away from the fight. As you turn your head to look back, the front line is getting destroyed, and their screams fill the air. Clout– (Go to Part 4)
+            No (50/50): You began shooting the enemies down. Enemies are falling down as you and the artillery men are providing coverage for the front line. You have sustained some minor injuries. Clout++ (Go to Part 5)
+            No (50/50): You began shooting the enemies down. But you didn’t notice that an enemy snuck up on you and headshot you. You instantly died. Game over.
+        (b): Are you sure that you want to help them out?
+            Yes (50/50): Feeling patriotic, you began shooting the enemies down like crazy and gained mad respect from everyone. Penta kill. Clout++ ⇒ Promotion. (Go to Part 5)
+            Yes (50/50): Assisting the frontline with precise aims. You didn’t notice an enemy’s air support dropped a bomb on top of you and the front line. Your body disintegrated. Game over. 
+            No (50/50): You backtracked and ran away from the battle. You felt ashamed because your best friends stayed behind to help out. You didn’t know what happened to your friends. Clout– (Go to Part 4)
+            No (50/50): You backtracked and stumbled as an enemy managed to shoot you in the leg. You got pelted with bullets, and died. Game over.
+
+Part 4: You are far away from the battlefield, and currently hiding. You ran back to camp. You survived but your reputation is bad. Game over.
+
+Part 5: You have returned to camp. You got taken to the medical tent to get bandaged up. Your best friend will visit you to bring you some food. You survived another day. Game over.
