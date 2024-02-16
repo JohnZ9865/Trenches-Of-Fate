@@ -54,6 +54,8 @@ This screen would start with a general storyline. Depending on the position/role
 End game:
 The end game screen would output the end game message. 
 
+The storyline diagram for the sniper/infantry
+![Alt text](image.png)
 ## Class Diagram
 > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from this template)
 > ![image](https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/9c88684c-fbe9-40cd-9980-3f6b0676097b)
