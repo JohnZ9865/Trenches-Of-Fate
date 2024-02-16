@@ -58,3 +58,6 @@ TEST(characterTests, position) { // position
     std::string position = aCharacter->getPosition();
     EXPECT_TRUE(position == "A" || position == "I" || position == "S" || position == "Air" || position == "O");
 }
+
+
+

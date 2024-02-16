@@ -1,0 +1,10 @@
+lib/*.a
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+debug
+tmprunfile
+test_char
+test_event
+/CMakeFiles
+
