@@ -20,11 +20,13 @@ public:
 
     void addOption(string ptext, string etext, bool inc);
 
-    string getText() const;
+    string getText();
 
-    const vector<Event*>& getOptions() const;
+    const vector<Event*>& getOptions();
 
-    int runEvent(std::ostream& output);
+    string Event::getPromptText();
+
+    // int runEvent(std::ostream& output);
 };
 
 #endif

@@ -5,11 +5,11 @@
 #include <string>
 using namespace std;
 
-class Character {
+struct Character {
     public:
         Character(); // constructor
 
-        // setters
+        //setters --- in the sense it prompt users for the info.
         void gainClout();
         void loseClout();
         void askName();
