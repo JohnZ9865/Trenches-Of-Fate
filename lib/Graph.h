@@ -16,10 +16,12 @@ private:
 
 public:
     Graph(Event* inc);
+    Graph();
 
-    string getCurrPlotPt();
+    Event* getCurrentEvent();
+    void setCurrentEvent(Event* newCurrEvent);
 
-    int runCurrentEvent(std::istream& input, std::ostream& output);
+    // int runCurrentEvent(std::istream& input, std::ostream& output);
 };
 
 #endif
