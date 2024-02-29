@@ -12,12 +12,12 @@ class Character {
         // setters
         void gainClout();
         void loseClout();
-        void askName();
-        void askGender();
-        void askNationality();
-        void askWeapon();
-        void askRank();
-        void askPosition();
+        void askName(istream& input, ostream& output);
+        void askGender(istream& input, ostream& output);
+        void askNationality(istream& input, ostream& output);
+        void askWeapon(istream& input, ostream& output);
+        void askRank(istream& input, ostream& output);
+        void askPosition(istream& input, ostream& output);
 
         // getters
         int getClout();
