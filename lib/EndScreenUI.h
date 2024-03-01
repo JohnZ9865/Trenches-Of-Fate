@@ -1,4 +1,5 @@
-
+#ifndef ENDSCREENUI_H
+#define ENDSCREENUI_H
 
 class EndScreenUI {
 
@@ -9,3 +10,5 @@ class EndScreenUI {
         }
 
 };
+
+#endif

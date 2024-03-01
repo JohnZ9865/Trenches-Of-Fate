@@ -16,6 +16,10 @@ add_executable(test_event_and_graph
     test/testEventGraph.cpp
 )
 
+
+
+
+
 TARGET_LINK_LIBRARIES(test_char gtest)
 TARGET_COMPILE_DEFINITIONS(test_char PRIVATE gtest_disable_pthreads=ON)
 

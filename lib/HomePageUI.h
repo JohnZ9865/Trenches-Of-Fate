@@ -1,3 +1,6 @@
+#ifndef HOMEPAGEUI_H
+#define HOMEPAGEUI_H
+
 #include <iostream>
 #include <string>
 #include <vector>
@@ -8,28 +11,13 @@
 using namespace std;
 class HomePageUI {
     private:
-        Game game;
+        Game& game;
 
     public:
-        HomePageUI(Game& inc) : game(inc)  {}
+        HomePageUI(Game& associatedGame) : game(associatedGame)  {}
 
-        void run(std::istream&input, std::ostream& output) {
-            
-            int choice;
-
-            SettingsUI settings(game);    
-
-            while (true) {
-                output << "=====================The Trenches of Fate========================="<<endl;
-                output << "Press 1 to change difficulty"<<endl;
-                output << "Press 2 to begin game" << endl;
-
-                input >> choice;
-                if (choice == 2) {
-                    return ;
-                } else if (choice == 1) {
-                    settings.run();
-                }
-            }
-        }
+        void run(std::istream&input, std::ostream& output);
 };
+
+
+#endif
