@@ -16,7 +16,7 @@ Event* Graph::getCurrentEvent() {
 }
 
 void Graph::setCurrentEvent(Event* newCurrEvent) {
-    curr = newCurrEvent;
+    curr = newCurrEvent; // currEvent is the node
 }
 
 // int Graph::runCurrentEvent(std::istream& input, std::ostream& output) {

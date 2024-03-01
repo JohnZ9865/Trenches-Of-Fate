@@ -56,6 +56,7 @@ The end game screen would output the end game message.
 
 The storyline diagram for the sniper/infantry
 ![Alt text](image.png)
+![alt text](image-1.png)
 ## Class Diagram
 > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from this template)
 > ![image](https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/9c88684c-fbe9-40cd-9980-3f6b0676097b)
@@ -69,13 +70,8 @@ The storyline diagram for the sniper/infantry
  > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
  
  > BEFORE the meeting you should do the following:
- > * Update your class diagram from Phase II to include any feedback you received from your TA/grader.
- > * Considering the SOLID design principles, reflect back on your class diagram and think about how you can use the SOLID principles to improve your design. You should then update the README.md file by adding the following:
- >   * A new class diagram incorporating your changes after considering the SOLID principles.
- >   * For each update in your class diagram, you must explain in 3-4 sentences:
- >     * What SOLID principle(s) did you apply?
- >     * How did you apply it? i.e. describe the change.
- >     * How did this change help you write better code?
+ > <Add new uml diagram here>
+ > The reason for all the changes: We had to basically create a whole new series of UI classes from scratch, because after talking to the professor, we realized that we needed to make our program abide by solid principles by separating the printing and taking in input, which was a part of our graph and event classes, to become their whole new own classes. In the past we were violating the solid principles of single responsibility principle by having the graph and event class be not only about the graph and event, but also about printing and taking in inputs.
  > * Perform a new sprint plan like you did in Phase II.
  > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
  

@@ -10,7 +10,7 @@ Event::Event(string ptext, string text1, bool isEndingEvent) : promptText(ptext)
     // initializes text and options with no follow up events
 }
 
-void Event::addOption(string ptext, string etext, bool inc) {
+void Event::addOption(string ptext, string etext, bool inc) { // inc checks if its the end of story
     Event* a = new Event(ptext, etext, inc);
     options.push_back(a);
 }
