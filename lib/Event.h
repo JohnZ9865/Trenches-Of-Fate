@@ -24,7 +24,7 @@ public:
 
     const vector<Event*>& getOptions();
 
-    string Event::getPromptText();
+    string getPromptText();
 
     // int runEvent(std::ostream& output);
 };
