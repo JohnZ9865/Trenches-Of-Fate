@@ -11,6 +11,8 @@ class StoryUI {
 
     public:
 
+        StoryUI(Game& associatedGame) : game(associatedGame) {};
+
         void displayCurrentEvent(std::ostream& output);
 
         int getUserInput(std::istream& input, std::ostream& output);
