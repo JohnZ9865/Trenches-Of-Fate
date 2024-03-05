@@ -35,6 +35,7 @@
 ### Navigation Diagram
 > Draw a diagram illustrating how the user can navigate from one screen to another. Here is an [example](https://creately.com/diagram/example/ikfqudv82/user-navigation-diagram-classic?r=v). It can be useful to label each symbol that represents a screen so that you can reference the screens in the next section or the rest of the document if necessary. Give a brief description of what the diagram represents.
 > ![image](https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/154624762/06974205-8231-4413-a487-45468227ee30)
+
 > The navigation diagram represent what a user could do when playing the game. It shows many interfaces the user can have as well.
 
 
@@ -57,10 +58,12 @@ The end game screen would output the end game message.
 The storyline diagram for the sniper/infantry
 ![Alt text](image.png)
 ![alt text](image-1.png)
+![alt text](image-2.png)
 ## Class Diagram
 > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from this template)
 > ![image](https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/9c88684c-fbe9-40cd-9980-3f6b0676097b)
-> 
+> ![image](https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/2a671e5e-b6a1-47f1-a0af-4d04b6807386)
+
 > Character class: Character class is a struct. All the ask functions which requests user input for character attributes like "askName", "askNationality", etc, are called in the constructor of the character. 
 > Graph class: Its a DAG that represents the storyline. It has a root member variable, which is a pointer which points to the start of the storyline, and a "curr" member variable, whihc is a pointer which points to the current Event in the story line. 
 > The Event class: The event class stores the text of event, and options which is a vector of pointers which points to the next events that could occur based off user decisions. runEvent() is the most important, it will display the text of the event, alongside the prompt of what options you can pick. It is called by runCurrentEvent of the graph class, and returns an integer --- 0 meaning the game has ended, 1 means the game did not end. The runCurrentEvent itself is called inside the startGame() method of Game class, which runs on a while loop that continously runs the current event, takes in input, etc.
