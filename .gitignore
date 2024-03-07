@@ -8,3 +8,5 @@ test_char
 test_event
 /CMakeFiles
 test/googletest 
+test_eg
+testrun

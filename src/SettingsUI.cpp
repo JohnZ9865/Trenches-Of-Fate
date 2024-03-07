@@ -3,6 +3,7 @@
 #include <vector>
 #include <sstream>
 #include "../lib/SettingsUI.h"
+#include "../lib/Game.h"
 
 using namespace std;
 

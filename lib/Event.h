@@ -26,6 +26,14 @@ public:
 
     string getPromptText();
 
+    bool isEnding() {
+        return isending;
+    }
+
+    void addOption(Event* nxtEvent) {
+        options.push_back(nxtEvent);
+    }
+
     // int runEvent(std::ostream& output);
 };
 
