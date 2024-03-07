@@ -20,8 +20,13 @@ public:
 
     Event* getCurrentEvent();
     void setCurrentEvent(Event* newCurrEvent);
+    void setRootEvent(Event* newRootEvent) {
+        root = newRootEvent;
+    }
 
     // int runCurrentEvent(std::istream& input, std::ostream& output);
+
+    friend class Game;
 };
 
 #endif
