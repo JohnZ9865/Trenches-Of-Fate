@@ -110,6 +110,25 @@ void Game::parser(string s, vector<string>& promptText, vector<string>& eventTex
     
 }
 
+void Game::runThroughStoryLine(std::istream&input, std::ostream& output) {
+    StoryUI storyUI(*this); //private variables: reference to character, reference to storyline.
+
+    bool died;
+    while (true) {
+        storyUI.displayCurrentEvent(output); //displays current Event.
+
+        if (storyline.getCurrentEvent()->isEnding() == true) {
+            break;
+        }
+
+        int choice = storyUI.getUserInput(input, output); //get userinput.
+
+
+        storyline.setCurrentEvent(storyline.getCurrentEvent()->getOptions()[choice]);
+
+    }
+}
+
 void Game::startGame() {
     //starts game, for loop for game runs here.
     
@@ -128,28 +147,12 @@ void Game::startGame() {
     charselect.run();
     */
 
-
-    StoryUI storyUI(*this); //private variables: reference to character, reference to storyline.
-
-    
-
-    bool died;
-    while (true) {
-        storyUI.displayCurrentEvent(std::cout); //displays current Event.
-
-        if (storyline.getCurrentEvent()->isEnding() == true) {
-            break;
-        }
-
-        int choice = storyUI.getUserInput(std::cin, std::cout); //get userinput.
-
-
-        storyline.setCurrentEvent(storyline.getCurrentEvent()->getOptions()[choice]);
-
-    }
-    
+   runThroughStoryLine(std::cin, std::cout);
 
     EndScreenUI endscreen;
     endscreen.run(std::cout);
 
 }
+
+
+

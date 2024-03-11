@@ -10,3 +10,5 @@ test_event
 test/googletest 
 test_eg
 testrun
+testgame
+test_event_and_graph

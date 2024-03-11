@@ -27,9 +27,22 @@ add_executable(testrun
     src/StoryUI.cpp
 )
 
+add_executable(testgame
+    src/Character.cpp
+    src/Event.cpp
+    src/Game.cpp
+    src/Graph.cpp
+    src/HomePageUI.cpp
+    test/testWholeGame.cpp
+    src/SettingsUI.cpp 
+    src/StoryUI.cpp
+)
+
 TARGET_LINK_LIBRARIES(test_eg gtest)
 TARGET_COMPILE_DEFINITIONS(test_eg PRIVATE gtest_disable_pthreads=ON)
 
 TARGET_LINK_LIBRARIES(test_eg gmock gtest gmock_main)
+
+TARGET_LINK_LIBRARIES(testgame gmock gtest gmock_main)
 
 

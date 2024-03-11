@@ -27,7 +27,7 @@ class Game {
         int difficulty; //1 means hard, 0 means easy.
         vector<Event*> eventList;
 
-        void initializeStoryline(string storyfilelink);
+        
         void parser(string s, vector<string>& promptText, vector<string>& eventText, vector<vector<int>>& child);
 
 
@@ -40,6 +40,20 @@ class Game {
             for (int i=0; i < eventList.size(); i++) {
                 delete eventList[i];
             }
+        }
+
+        void initializeStoryline(string storyfilelink);
+        void runThroughStoryLine(std::istream&input, std::ostream& output);
+        int getDifficulty() {
+            return difficulty;
+        }
+
+        Graph& getStoryline() {
+            return storyline;
+        }
+
+        Character& getCharacter() {
+            return character;
         }
     
 
