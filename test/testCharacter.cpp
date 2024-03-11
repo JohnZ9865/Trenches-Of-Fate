@@ -8,23 +8,6 @@ int main(int argc, char **argv) {
     return RUN_ALL_TESTS();
 }
 
-TEST(CharacterTest, CharacterInfo) { // all inputs
-    Character aCharacter;
-    aCharacter.getName("Bob");
-    aCharacter.getGender("M");
-    aCharacter.getNationality("R");
-    aCharacter.getRank("P");
-    aCharacter.getPosition("A");
-    aCharacter.getWeapon("S", "");
-
-    EXPECT_EQ("Bob", aCharacter.obtainName());
-    EXPECT_EQ("M", aCharacter.obtainGender());
-    EXPECT_EQ("R", aCharacter.obtainNationality());
-    EXPECT_EQ("P", aCharacter.obtainRank());
-    EXPECT_EQ("A", aCharacter.obtainPosition());
-    EXPECT_EQ("S", aCharacter.obtainWeapon());
-}
-
 TEST(characterTests, clout) { // clout
     Character *aCharacter = new Character();
     aCharacter->gainClout();
@@ -36,30 +19,77 @@ TEST(characterTests, clout) { // clout
     EXPECT_EQ(aCharacter->getClout(), 1);
 }
 
-TEST(characterTests, weapon) { // weapon w/o air
+TEST (CharacterTest, name) {
     Character aCharacter;
     CharacterSelectionUI characterUI(aCharacter);
 
-    std::istringstream input("Air\n");
+    std::istringstream input("Bob");
     std::ostringstream output;
 
-    characterUI.askWeapon(input, output);
+    characterUI.askName(input, output);
 
-    EXPECT_EQ("Air", aCharacter.obtainWeapon());
+    EXPECT_EQ("Bob", aCharacter.obtainName());
 }
 
-TEST(CharacterSelectionUITest, weaponAir) { // weapon w air
+TEST (CharacterTest, gender) {
     Character aCharacter;
     CharacterSelectionUI characterUI(aCharacter);
 
-    std::istringstream input("Air\nB\n"); // select Air, then B
-    std::stringstream output;
+    std::istringstream input("M");
+    std::ostringstream output;
 
-    characterUI.askPosition(input, output); 
-    characterUI.askWeapon(input, output);  
+    characterUI.askGender(input, output);
 
-    EXPECT_TRUE(aCharacter.obtainisAir());
-    EXPECT_EQ("B", aCharacter.obtainWeapon()); 
+    EXPECT_EQ("M", aCharacter.obtainGender());
+}
+
+TEST (CharacterTest, nationality) {
+    Character aCharacter;
+    CharacterSelectionUI characterUI(aCharacter);
+
+    std::istringstream input("R");
+    std::ostringstream output;
+
+    characterUI.askNationality(input, output);
+
+    EXPECT_EQ("R", aCharacter.obtainNationality());
+}
+
+TEST (CharacterTest, rank) {
+    Character aCharacter;
+    CharacterSelectionUI characterUI(aCharacter);
+
+    std::istringstream input("P");
+    std::ostringstream output;
+
+    characterUI.askRank(input, output);
+
+    EXPECT_EQ("P", aCharacter.obtainRank());
+}
+
+TEST (CharacterTest, position) {
+    Character aCharacter;
+    CharacterSelectionUI characterUI(aCharacter);
+
+    std::istringstream input("A");
+    std::ostringstream output;
+
+    characterUI.askPosition(input, output);
+
+    EXPECT_EQ("A", aCharacter.obtainPosition());
+}
+
+TEST(characterTests, weapon) { // weapon
+    Character aCharacter;
+    CharacterSelectionUI characterUI(aCharacter);
+
+    std::istringstream input("S");
+    std::ostringstream output;
+
+    characterUI.askPosition(input, output);
+
+    EXPECT_EQ("S", aCharacter.obtainPosition());
+    EXPECT_EQ("S", aCharacter.obtainWeapon());
 }
 
 TEST(CharacterSelectionUITest, WrongGenderInput) { // supposed to fail but is not failing

@@ -32,13 +32,8 @@ string Character::getNationality(const string& nationality_input) {
     return nationality;
 }
 
-string Character::getWeapon(const string& weapon_input, const string& air_support_input) {
-    if (this->isAir == true) {
-        weapon = air_support_input;
-    }
-    else {
-        weapon = weapon_input;
-    }
+string Character::getWeapon(const string& weapon_input) {
+    weapon = weapon_input;
     return weapon;
 }
 
@@ -51,11 +46,6 @@ string Character::getPosition(const string& position_input) {
     position = position_input;
     return position;
 }
-
-bool Character::getisAir(const bool& air) {
-    isAir = air;
-    return isAir;
- }
 
 // no parameter getters (obtain)
 
@@ -82,7 +72,3 @@ string Character::obtainRank() {
 string Character::obtainPosition() {
     return position;
 }
-
-bool Character::obtainisAir() {
-    return isAir;
- }
