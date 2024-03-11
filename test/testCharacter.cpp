@@ -92,17 +92,16 @@ TEST(characterTests, weapon) { // weapon
     EXPECT_EQ("S", aCharacter.obtainWeapon());
 }
 
-TEST(CharacterSelectionUITest, WrongGenderInput) { // supposed to fail but is not failing
+TEST(CharacterSelectionUITest, WrongGenderInput) { 
     Character character;
     CharacterSelectionUI characterUI(character);
 
-    std::stringstream input("X\n");
+    std::stringstream input("X");
     std::stringstream output;
 
     characterUI.askGender(input, output);
 
-    // EXPECT_EQ("M", character.obtainGender());
-    EXPECT_STREQ("M", "S"); // testing
+    EXPECT_NE("M", character.obtainGender());
 }
 
 
