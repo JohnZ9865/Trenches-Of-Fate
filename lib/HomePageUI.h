@@ -7,6 +7,7 @@
 #include <sstream>
 
 #include "SettingsUI.h"
+class Game;
 
 using namespace std;
 class HomePageUI {
@@ -17,6 +18,7 @@ class HomePageUI {
         HomePageUI(Game& associatedGame) : game(associatedGame)  {}
 
         void run(std::istream&input, std::ostream& output);
+        
 };
 
 

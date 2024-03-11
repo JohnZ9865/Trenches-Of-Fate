@@ -1,10 +1,12 @@
 #ifndef SETTINGSUI_H
-#define settingsui_h
+#define SETTINGSUI_H
 
 #include <iostream>
 #include <string>
 #include <vector>
 #include <sstream>
+
+class Game;
 
 using namespace std;
 

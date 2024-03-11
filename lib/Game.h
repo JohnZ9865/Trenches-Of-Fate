@@ -4,14 +4,16 @@
 #include <string>
 #include <vector>
 #include <sstream>
+
+
 #include "Event.h"
 #include "Graph.h"
-
 #include "HomePageUI.h"
 #include "SettingsUI.h"
 #include "StoryUI.h"
 #include "EndScreenUI.h"
 #include "CharacterSelectionUI.h"
+#include "Character.h"
 
 #include <fstream>
 
@@ -25,11 +27,19 @@ class Game {
         int difficulty; //1 means hard, 0 means easy.
 
         void initializeStoryline(string storyfilelink);
+        Event* helper(string inputstring);
 
     public:
-        Game() : character(), storyline() {}
+        Game() : character(), storyline(), difficulty(0) {}
         
         void startGame();
+    
+
+    friend class StoryUI;
+    friend class SettingsUI;
+    friend class HomePageUI;
+    friend class CharacterSelectionUI;
+    friend class EndScreenUI;
 
 };
 #endif

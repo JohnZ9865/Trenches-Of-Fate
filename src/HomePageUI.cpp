@@ -17,7 +17,7 @@ void HomePageUI::run(std::istream&input, std::ostream& output) {
         if (choice == 2) {
             return ;
         } else if (choice == 1) {
-            settings.run();
+            settings.run(std::cin, std::cout);
         }
     }
 }
