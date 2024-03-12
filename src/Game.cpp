@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <sstream>
+#include <fstream>
 
 #include "../lib/Game.h"
 
@@ -24,23 +25,109 @@ using namespace std;
 
 void Game::initializeStoryline(string storyfilelink) {
 
-    Event* stub = new Event("none", "You're in front of enemy", false);
-    storyline.setCurrentEvent(stub);
-    storyline.setRootEvent(stub);
+    std::ifstream inputFile(storyfilelink);
 
-    Event* choice1 = new Event("shoot them", "kills enemy, you live", true);
-    Event* choice2 = new Event("freeze", "you freeze and you die", true);
-    stub->addOption(choice1);
-    stub->addOption(choice2);
+    if (!inputFile) {
+        cout << "Could not open the file!" << endl;
+    }
+
+
+    string str;
+    vector<string> promptText;
+    vector<string> eventText;
+    vector<vector<int>> child;
+
+    while (std::getline(inputFile, str)) {
+        parser(str, promptText, eventText, child);
+    }
+
+
+
+    for (int i=0; i < promptText.size(); i++) {
+        bool isEnding = false;
+        if (child[i].size() == 0) isEnding = true;
+        eventList.push_back(new Event(promptText[i], eventText[i], isEnding));
+
+    }
+
+
+    //link events together.
+    for (int i=0; i < child.size(); i++) {
+        
+        for (int j =0; j < child[i].size(); j++) {
+            eventList[i]->addOption(eventList[child[i][j]]);
+        }
+    }
+
+
+    storyline.setRootEvent(eventList[0]);
+    storyline.setCurrentEvent(eventList[0]);
 
 
     return ;
 }
 
-void Game::helper(string inputstring) {
-    string s = inputstring;
+void Game::parser(string s, vector<string>& promptText, vector<string>& eventText, vector<vector<int>>& child) {
+    //expects first event to be root event. 
+    string curr ="";
+    int currstatus = 0;
+
+    vector<int> tmp = {};
+
+    for (char e: s) {
+        if (currstatus < 3) {
+            if (e == ' ' || e == ']' || e == ',') {
+                continue;
+            } else if (e == '[') {
+                if (currstatus == 1) {
+                    promptText.push_back(curr);
+                    curr= "";
+                } else if (currstatus == 2) {
+                    eventText.push_back(curr);
+                    curr= "";
+                }
+                currstatus+=1;
+            } else {
+                curr+=e;
+            }
+        } else {
+            if (e == ' ' || e ==']') {
+                continue;
+            } else if (e == ',') {
+                tmp.push_back(std::stoi(curr));
+                curr = "";
+            } else {
+                curr += e;
+            }
+        }
+    }
     
-} 
+    if (curr != "") {
+        tmp.push_back(std::stoi(curr));
+    }
+    
+    child.push_back(tmp);
+    
+}
+
+void Game::runThroughStoryLine(std::istream&input, std::ostream& output) {
+    StoryUI storyUI(*this); //private variables: reference to character, reference to storyline.
+
+    bool died;
+    while (true) {
+        storyUI.displayCurrentEvent(output); //displays current Event.
+
+        if (storyline.getCurrentEvent()->isEnding() == true) {
+            break;
+        }
+
+        int choice = storyUI.getUserInput(input, output); //get userinput.
+
+
+        storyline.setCurrentEvent(storyline.getCurrentEvent()->getOptions()[choice]);
+
+    }
+}
 
 void Game::startGame() {
     //starts game, for loop for game runs here.
@@ -48,42 +135,24 @@ void Game::startGame() {
     HomePageUI homepage(*this); //.run, which handles display. Very small class with a single function, .run that handles io. Inside, will also create SettingsUI.
     homepage.run(std::cin, std::cout);
 
-    cout << "place1" <<endl;
-
     if (difficulty == 1) {
-        initializeStoryline("easylink");
+        initializeStoryline("storylineFiles/test1.txt");
     } else {
-        initializeStoryline("hardlink");
+        initializeStoryline("storylineFiles/test1.txt");
     }
+
 
     /*
     CharacterSelectionUI charselect; //.run, which calls .askGender, .askWeapon, etc.
     charselect.run();
     */
 
-    cout << "place2" <<endl;
-
-    StoryUI storyUI(*this); //private variables: reference to character, reference to storyline.
-
-    
-
-    bool died;
-    while (true) {
-        storyUI.displayCurrentEvent(std::cout); //displays current Event.
-
-        if (storyline.getCurrentEvent()->isEnding() == true) {
-            break;
-        }
-
-        int choice = storyUI.getUserInput(std::cin, std::cout); //get userinput.
-
-        
-        storyline.setCurrentEvent(storyline.getCurrentEvent()->getOptions()[choice]);
-
-    }
-    
+   runThroughStoryLine(std::cin, std::cout);
 
     EndScreenUI endscreen;
     endscreen.run(std::cout);
 
 }
+
+
+
