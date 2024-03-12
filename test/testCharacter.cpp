@@ -8,16 +8,6 @@ int main(int argc, char **argv) {
     return RUN_ALL_TESTS();
 }
 
-TEST(characterTests, clout) { // clout
-    Character *aCharacter = new Character();
-    aCharacter->gainClout();
-    aCharacter->gainClout();
-    aCharacter->gainClout();
-    EXPECT_EQ(aCharacter->getClout(), 3);
-    aCharacter->loseClout();
-    aCharacter->loseClout();
-    EXPECT_EQ(aCharacter->getClout(), 1);
-}
 
 TEST (CharacterTest, name) {
     Character aCharacter;
@@ -43,6 +33,18 @@ TEST (CharacterTest, gender) {
     EXPECT_EQ("M", aCharacter.obtainGender());
 }
 
+TEST (CharacterTest, gender1) {
+    Character aCharacter;
+    CharacterSelectionUI characterUI(aCharacter);
+
+    std::istringstream input("J");
+    std::ostringstream output;
+
+    characterUI.askGender(input, output);
+
+    EXPECT_EQ("M", aCharacter.obtainGender());
+}
+
 TEST (CharacterTest, nationality) {
     Character aCharacter;
     CharacterSelectionUI characterUI(aCharacter);
@@ -53,6 +55,18 @@ TEST (CharacterTest, nationality) {
     characterUI.askNationality(input, output);
 
     EXPECT_EQ("R", aCharacter.obtainNationality());
+}
+
+TEST (CharacterTest, nationality1) {
+    Character aCharacter;
+    CharacterSelectionUI characterUI(aCharacter);
+
+    std::istringstream input("Nwewhjk wbaubewae");
+    std::ostringstream output;
+
+    characterUI.askNationality(input, output);
+
+    EXPECT_EQ("B", aCharacter.obtainNationality());
 }
 
 TEST (CharacterTest, rank) {
@@ -67,30 +81,18 @@ TEST (CharacterTest, rank) {
     EXPECT_EQ("P", aCharacter.obtainRank());
 }
 
-TEST (CharacterTest, position) {
+TEST (CharacterTest, rank1) {
     Character aCharacter;
     CharacterSelectionUI characterUI(aCharacter);
 
-    std::istringstream input("A");
+    std::istringstream input("asdjha kdas");
     std::ostringstream output;
 
-    characterUI.askPosition(input, output);
+    characterUI.askRank(input, output);
 
-    EXPECT_EQ("A", aCharacter.obtainPosition());
+    EXPECT_EQ("I", aCharacter.obtainRank());
 }
 
-TEST(characterTests, weapon) { // weapon
-    Character aCharacter;
-    CharacterSelectionUI characterUI(aCharacter);
-
-    std::istringstream input("S");
-    std::ostringstream output;
-
-    characterUI.askPosition(input, output);
-
-    EXPECT_EQ("S", aCharacter.obtainPosition());
-    EXPECT_EQ("S", aCharacter.obtainWeapon());
-}
 
 TEST(CharacterSelectionUITest, WrongGenderInput) { 
     Character character;

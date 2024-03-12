@@ -22,7 +22,7 @@ using namespace std;
 
 class Game {
     private:
-        Character character;
+        Character ourCharacter;
         Graph storyline;
         int difficulty; //1 means hard, 0 means easy.
         vector<Event*> eventList;
@@ -32,7 +32,7 @@ class Game {
 
 
     public:
-        Game() : character(), storyline(), difficulty(0) {}
+        Game() : ourCharacter(), storyline(), difficulty(0) {}
         
         void startGame();
 
@@ -53,7 +53,7 @@ class Game {
         }
 
         Character& getCharacter() {
-            return character;
+            return ourCharacter;
         }
     
 
