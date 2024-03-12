@@ -107,7 +107,7 @@ void CharacterSelectionUI::askWeapon(istream& input, ostream& output, string aPo
     else if (aPosition == "I") {
         weapon_input = aPosition;
         thischar->getWeapon(weapon_input);
-        output << "Since you are an infrantry, you are given a missile. " << endl;
+        output << "Since you are an infrantry, you are given a rifle. " << endl;
     }
     else {
         weapon_input = "";

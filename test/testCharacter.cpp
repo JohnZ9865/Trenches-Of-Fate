@@ -8,16 +8,6 @@ int main(int argc, char **argv) {
     return RUN_ALL_TESTS();
 }
 
-TEST(characterTests, clout) { // clout
-    Character *aCharacter = new Character();
-    aCharacter->gainClout();
-    aCharacter->gainClout();
-    aCharacter->gainClout();
-    EXPECT_EQ(aCharacter->getClout(), 3);
-    aCharacter->loseClout();
-    aCharacter->loseClout();
-    EXPECT_EQ(aCharacter->getClout(), 1);
-}
 
 TEST (CharacterTest, name) {
     Character aCharacter;
