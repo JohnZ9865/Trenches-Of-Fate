@@ -21,21 +21,6 @@ string Character::setNationality(const string& nationality_input) {
     return nationality;
 }
 
-string Character::setWeapon(const string& weapon_input) {
-    weapon = weapon_input;
-    return weapon;
-}
-
-string Character::setRank(const string& rank_input) {
-    rank = rank_input;
-    return rank;
-}
-
-string Character::setPosition(const string& position_input) {
-    position = position_input;
-    return position;
-}
-
 // no parameter getters (obtain)
 
 string Character::obtainName() {
@@ -48,16 +33,4 @@ string Character::obtainGender() {
 
 string Character::obtainNationality() {
     return nationality;
-}
-
-string Character::obtainWeapon() {
-    return weapon;
-}
-
-string Character::obtainRank() {
-    return rank;
-}
-
-string Character::obtainPosition() {
-    return position;
 }
