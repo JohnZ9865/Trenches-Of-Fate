@@ -142,10 +142,8 @@ void Game::startGame() {
     }
 
 
-    /*
-    CharacterSelectionUI charselect; //.run, which calls .askGender, .askWeapon, etc.
-    charselect.run();
-    */
+    CharacterSelectionUI charselect(ourCharacter); //.run, which calls .askGender, .askWeapon, etc.
+    charselect.run(std::cin, std::cout);
 
    runThroughStoryLine(std::cin, std::cout);
 

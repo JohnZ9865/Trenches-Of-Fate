@@ -16,6 +16,14 @@ class CharacterSelectionUI {
         void askWeapon(istream& input, ostream& output, string aPosition);
         void askRank(istream& input, ostream& output);
         void askPosition(istream& input, ostream& output);
+        void run(istream& input, ostream& output) {
+            askName(input, output);
+            askGender(input, output);
+            askNationality(input, output);
+            askPosition(input, output);
+            askWeapon(input, output, thischar->obtainPosition());
+            askRank(input, output);
+        }
     private:
         Character* thischar;
 };
