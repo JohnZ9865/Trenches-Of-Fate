@@ -69,25 +69,34 @@ void CharacterSelectionUI::askRank(istream& input, ostream& output) { // does no
 
 void CharacterSelectionUI::askPosition(istream& input, ostream& output) { 
     output << "Enter your character's position. Type A for artillery, I for infantry, or S for sniper" << endl;
-    string position_input;
-    input >> position_input;
 
-    if (position_input == "A") {
-        thischar->setPosition(position_input);
-        askWeapon(input, output, position_input);
-    }
-    else if (position_input == "I") {
-        thischar->setPosition(position_input);
-        askWeapon(input, output, position_input);
-    }
-    else if (position_input == "S") {
-        thischar->setPosition(position_input);
-        askWeapon(input, output, position_input);
-    }
-    else {
-        output << "This position does not exist." << endl;
-        position_input = "";
-        thischar->setPosition(position_input);
+    while (true) {
+        string position_input;
+        std::getline(input, position_input);
+
+        if (position_input.length() != 1) {
+            output << "This position does not exist"<<endl;
+            continue;
+        }
+
+        if (position_input == "A") {
+            thischar->setPosition(position_input);
+            askWeapon(input, output, position_input);
+            return ;
+        }
+        else if (position_input == "I") {
+            thischar->setPosition(position_input);
+            askWeapon(input, output, position_input);
+            return ;
+        }
+        else if (position_input == "S") {
+            thischar->setPosition(position_input);
+            askWeapon(input, output, position_input);
+            return ;
+        } else {
+            output << "This position does not exist." << endl;
+            continue;
+        }
     }
 }
 
@@ -108,8 +117,7 @@ void CharacterSelectionUI::askWeapon(istream& input, ostream& output, string aPo
         weapon_input = aPosition;
         thischar->setWeapon(weapon_input);
         output << "Since you are an infrantry, you are given a rifle. " << endl;
-    }
-    else {
+    } else {
         weapon_input = "";
         thischar->setWeapon(weapon_input);
         output << "What? You don't have a rank. We cannot give you a weapon. " << endl;

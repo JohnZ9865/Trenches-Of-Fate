@@ -145,7 +145,7 @@ void Game::startGame() {
     CharacterSelectionUI charselect(ourCharacter); //.run, which calls .askGender, .askWeapon, etc.
     charselect.run(std::cin, std::cout);
 
-   runThroughStoryLine(std::cin, std::cout);
+    runThroughStoryLine(std::cin, std::cout);
 
     EndScreenUI endscreen;
     endscreen.run(std::cout);
