@@ -9,7 +9,7 @@ class Character;
 
 class CharacterSelectionUI {
     public:
-        CharacterSelectionUI(Character& thischar);
+        CharacterSelectionUI(Character& thischar) : thischar(&thischar) {}
         void askName(istream& input, ostream& output);
         void askGender(istream& input, ostream& output);
         void askNationality(istream& input, ostream& output);

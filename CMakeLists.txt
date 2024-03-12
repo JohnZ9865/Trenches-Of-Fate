@@ -24,10 +24,12 @@ add_executable(testrun
     src/main.cpp
     src/SettingsUI.cpp 
     src/StoryUI.cpp
+    src/CharacterSelectionUI.cpp
 )
 
 add_executable(testgame
     src/Character.cpp
+    src/CharacterSelectionUI.cpp
     src/Event.cpp
     src/Game.cpp
     src/Graph.cpp

@@ -81,7 +81,7 @@ TEST (CharacterTest, rank) {
     EXPECT_EQ("P", aCharacter.obtainRank());
 }
 
-TEST (CharacterTest, rank) {
+TEST (CharacterTest, rank1) {
     Character aCharacter;
     CharacterSelectionUI characterUI(aCharacter);
 

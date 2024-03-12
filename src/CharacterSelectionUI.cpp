@@ -4,7 +4,7 @@
 #include <string>
 using namespace std;
 
-CharacterSelectionUI::CharacterSelectionUI(Character& thischar) : thischar(&thischar) {}
+// CharacterSelectionUI::CharacterSelectionUI(Character& thischar) : thischar(&thischar) {}
 
 void CharacterSelectionUI::askName(istream& input, ostream& output) { // does not affect gameplay
     output << "Enter the character's name: " << endl;
