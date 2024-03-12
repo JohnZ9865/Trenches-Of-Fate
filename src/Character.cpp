@@ -34,3 +34,12 @@ string Character::obtainGender() {
 string Character::obtainNationality() {
     return nationality;
 }
+
+string Character::setRank(const string& rank_input) {
+    rank = rank_input;
+    return rank;
+}
+
+string Character::obtainRank() {
+    return rank;
+}

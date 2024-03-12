@@ -13,10 +13,12 @@ class CharacterSelectionUI {
         void askName(istream& input, ostream& output);
         void askGender(istream& input, ostream& output);
         void askNationality(istream& input, ostream& output);
+        void askRank(istream& input, ostream& output);
         void run(istream& input, ostream& output) {
             askName(input, output);
             askGender(input, output);
             askNationality(input, output);
+            askRank(input, output);
         }
     private:
         Character* thischar;

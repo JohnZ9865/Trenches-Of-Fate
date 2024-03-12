@@ -31,6 +31,24 @@ void CharacterSelectionUI::askGender(istream& input, ostream& output) { // does 
     }
 }
 
+void CharacterSelectionUI::askRank(istream& input, ostream& output) { // does not affect gameplay
+    output << "Enter your character's rank. Type P for private and I for lieutenant. *will add more choices later*" << endl;
+    string rank_input;
+    std::getline(input, rank_input);
+
+    if (rank_input == "P") {
+        thischar->setRank(rank_input);
+    }
+    else if (rank_input == "I") {
+        thischar->setRank(rank_input);
+    }
+    else {
+        output << "This rank does not exist. You're now a lieutenant." << endl;
+        rank_input = "I";
+        thischar->setRank(rank_input);
+    }
+}
+
 void CharacterSelectionUI::askNationality(istream& input, ostream& output) { // does not affect gameplay
     output << "Enter your character's nationality. Type R for Russian and B for British." << endl;
 
