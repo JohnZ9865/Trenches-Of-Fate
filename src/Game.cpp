@@ -131,6 +131,8 @@ void Game::runThroughStoryLine(std::istream&input, std::ostream& output) {
 
 void Game::startGame() {
     //starts game, for loop for game runs here.
+    //valgrind command: g++ -g -O0 filename.cpp -o runfile
+    //valgrind --leak-check=full ./testrun
     
     HomePageUI homepage(*this); //.run, which handles display. Very small class with a single function, .run that handles io. Inside, will also create SettingsUI.
     homepage.run(std::cin, std::cout);
@@ -149,7 +151,6 @@ void Game::startGame() {
 
     EndScreenUI endscreen;
     endscreen.run(std::cout);
-
 }
 
 
