@@ -5,51 +5,36 @@
 #include <string>
 using namespace std;
 
-// struct Character {
-//     public:
-//         Character(); // constructor
+class Character {
+    public:
+        Character(); // constructor
+        void gainClout();
+        void loseClout();
 
-//         //setters --- in the sense it prompt users for the info.
-//         void gainClout();
-//         void loseClout();
-//         void askName(istream& input, ostream& output);
-//         void askGender(istream& input, ostream& output);
-//         void askNationality(istream& input, ostream& output);
-//         void askWeapon(istream& input, ostream& output);
-//         void askRank(istream& input, ostream& output);
-//         void askPosition(istream& input, ostream& output);
+        // getters
+        int getClout();
+        string getName(const string& name_input);
+        string getGender(const string& gender_input);
+        string getNationality(const string& nationality_input);
+        string getWeapon(const string& weapon_input);
+        string getRank(const string& rank_input);
+        string getPosition(const string& position_input);
 
-//         // getters
-//         int getClout();
-//         string getName();
-//         string getGender();
-//         string getNationality();
-//         string getWeapon();
-//         string getRank();
-//         string getPosition();
-//     private:
-//         string name;
-//         string gender; 
-//         string nationality;
-//         string weapon;
-//         string rank;
-//         string position;
-//         string air_support; // special 
-//         int clout;
-// };
-
-struct Character {
+        // getters but no parameter (use this as the main getter)
+        string obtainName(); 
+        string obtainGender();
+        string obtainNationality();
+        string obtainWeapon();
+        string obtainRank();
+        string obtainPosition();
     private:
         string name;
-        string gender;
+        string gender; 
         string nationality;
         string weapon;
         string rank;
         string position;
-    public:
-        Character() : name("Joe"), gender("man"), nationality("Russian"), weapon("gun1"), rank("LT"), position("infantry") {}
-
+        int clout;
 };
-
 
 #endif
