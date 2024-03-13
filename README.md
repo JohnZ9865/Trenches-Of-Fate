@@ -16,7 +16,7 @@
 > The game would be ran from the command line, with a storyline represented by a graph. Input and output will be managed through the terminal, providing a classic and straightforward interface for users to engage with the game.
 
 ## What are the features that the project provides?
-> The project is based off a story game where each decision made by the user changes the story in some way for different results. The user would be able to first choose character, weapon, rank, nationality, etc. Through pressing certain keys as directed by the game, the user will be able to start the game and make choices throughout the game as they face decisions in the story line (which would look closer to a Directed Acylic Graph than an actual "line"). The story line would diverge depending on the decisions that had been taken. The character could be shot at, killed by shells, executed by his officer, or manage to survive for another day. An endgame screen would appear, announcing that the player had died. In addition, there's also an option to increase or decrease the difficulty, which would make the story easier or harder for the player to survive.
+> The project is based off a story game where each decision made by the user changes the story in some way for different results. The user would be able to first choose character, weapon, rank, nationality, etc. The user will be able to choose between easy and hard mode, with the hard mode being harder to survive than easy mode. Through pressing certain keys as directed by the game, the user will be able to start the game and make choices throughout the game as they face decisions in the story line (which would look closer to a Directed Acylic Graph than an actual "line"). The story line would diverge depending on the decisions that had been taken. The character could be shot at, killed by shells, executed by his officer, or manage to survive for another day. An endgame screen would appear, announcing that the player had died. In addition, there's also an option to increase or decrease the difficulty, which would make the story easier or harder for the player to survive.
 > Another backend feature that the project provides is the dynamic generation of the storyline from a text file: The text file will have each line be in the format of [prompttext] [eventtext] [linked events(0 indexed)], from which a storyline can be dynamically generated using a meticulously made string parser that parses individual lines and characters. This would allow for developers who're not familiar with the tech stack to easily change or update the storyline without having to know how the program itself works.
 
  > ## Phase II
@@ -53,13 +53,17 @@ The player can either create a new character or select their saved character fro
 Storytelling:
 This screen would start with a general storyline. Depending on the position/role from the character they have created, the player would have an unique storyline being outputted. The user enters a y or n when given an event to dictate what happens next in the game. 
 
+Our storyline for easy mode:
+<img width="494" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/1bc48454-404c-4c5e-a85b-4b0e022d1520">
+Our storyline for hard mode:
+<img width="466" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/3e6e80c9-c64e-4bc7-b9bb-f7ee73c491c1">
+
+
+
 End game:
 The end game screen would output the end game message. 
 
-The storyline diagram for the sniper/infantry
-![Alt text](image.png)
-![alt text](image-1.png)
-![alt text](image-2.png)
+
 ## Class Diagram
 > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from this template)
 > ![image](https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/9c88684c-fbe9-40cd-9980-3f6b0676097b)
@@ -96,7 +100,7 @@ The storyline diagram for the sniper/infantry
  ## Screenshots
  > Screenshots of the input/output after running your application
  ## Installation/Usage
- > Instructions on installing and running your application
+ > To run the application, run "cmake .", then "make", then "./rungame".
  ## Testing
- > How was your project tested/validated? If you used CI, you should have a "build passing" badge in this README.
+ > How was your project tested/validated? For us, we had unit test for every single class, whether its the UIs, graph, event, game, or anything else. We aim for 100 percent code coverage on every single method, and 80 percent code coverage overall in the program in case that's not achievable.
  
