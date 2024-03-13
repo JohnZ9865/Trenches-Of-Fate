@@ -32,7 +32,7 @@ void CharacterSelectionUI::askGender(istream& input, ostream& output) { // does 
 }
 
 void CharacterSelectionUI::askRank(istream& input, ostream& output) { // does not affect gameplay
-    output << "Enter your character's rank. Type P for private and I for lieutenant. *will add more choices later*" << endl;
+    output << "Enter your character's rank. Type P for private and I for lieutenant." << endl;
     string rank_input;
     std::getline(input, rank_input);
 

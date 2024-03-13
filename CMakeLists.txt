@@ -15,7 +15,7 @@ add_executable(test_eg # eg = event graph
     test/testEventGraph.cpp
 )
 
-add_executable(testrun
+add_executable(rungame
     src/Character.cpp
     src/Event.cpp
     src/Game.cpp
