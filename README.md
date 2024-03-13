@@ -53,11 +53,6 @@ The player can either create a new character or select their saved character fro
 Storytelling:
 This screen would start with a general storyline. Depending on the position/role from the character they have created, the player would have an unique storyline being outputted. The user enters a y or n when given an event to dictate what happens next in the game. 
 
-Our storyline for easy mode:
-<img width="494" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/1bc48454-404c-4c5e-a85b-4b0e022d1520">
-Our storyline for hard mode:
-<img width="466" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/3e6e80c9-c64e-4bc7-b9bb-f7ee73c491c1">
-
 
 
 End game:
