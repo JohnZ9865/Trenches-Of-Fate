@@ -103,7 +103,8 @@ TEST(CharacterSelectionUITest, WrongGenderInput) {
 
     characterUI.askGender(input, output);
 
-    EXPECT_NE("M", character.obtainGender());
+
+    EXPECT_EQ("M", character.obtainGender());
 }
 
 

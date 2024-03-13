@@ -19,7 +19,7 @@ void StoryUI::displayCurrentEvent(std::ostream& output) {
     
 
     if (!currentEvent->isEnding()) {
-        output << "You can now do one of the following:"<< endl;
+        output << "\nYou can now do one of the following:"<< endl;
         for (int i=0; i < options.size(); i++) {
             output << "Press " << i << " to " << options[i]->getPromptText() <<endl;
         }

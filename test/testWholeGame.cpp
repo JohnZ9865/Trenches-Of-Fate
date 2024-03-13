@@ -29,7 +29,7 @@ TEST(HomPageTest, HomePageTest1) {
     Game mygame;
     HomePageUI homepage(mygame);
 
-    std::istringstream iss("1 2 1 1 2");
+    std::istringstream iss("1\n2\n1\n1\n2\n");
     std::ostringstream oss;
 
     homepage.run(iss, oss);
@@ -42,7 +42,7 @@ TEST(HomPageTest, HomePageTest2) {
     Game mygame;
     HomePageUI homepage(mygame);
 
-    std::istringstream iss("1 2 1 2 2");
+    std::istringstream iss("1\n2\n1\n2\n2\n");
     std::ostringstream oss;
 
     homepage.run(iss, oss);
@@ -82,14 +82,14 @@ TEST(StoryLineInitializationTest, StoryLineTest3) {
 TEST(WholeGameTest, WholeGameTest1) {
     Game mygame;
     HomePageUI homepage(mygame);
-    std::istringstream iss("1 2 1 2 2"); //difficulty set to hard.
+    std::istringstream iss("1\n2\n1\n2\n2\n"); //difficulty set to hard.
     std::ostringstream oss;
 
     homepage.run(iss, oss);
     mygame.initializeStoryline("storylineFiles/test1.txt");
 
 
-    std::istringstream iss1("0 1");
+    std::istringstream iss1("0\n1\n");
     std::ostringstream oss1;
     mygame.runThroughStoryLine(iss1, oss1);
 
@@ -100,14 +100,14 @@ TEST(WholeGameTest, WholeGameTest1) {
 TEST(WholeGameTest, WholeGameTest2) {
     Game mygame;
     HomePageUI homepage(mygame);
-    std::istringstream iss("1 2 1 2 2"); //difficulty set to hard.
+    std::istringstream iss("1\n2\n1\n2\n2\n"); //difficulty set to hard.
     std::ostringstream oss;
 
     homepage.run(iss, oss);
     mygame.initializeStoryline("storylineFiles/test1.txt");
 
 
-    std::istringstream iss1("0 0");
+    std::istringstream iss1("0\n0\n");
     std::ostringstream oss1;
     mygame.runThroughStoryLine(iss1, oss1);
 

@@ -76,7 +76,7 @@ void Game::parser(string s, vector<string>& promptText, vector<string>& eventTex
 
     for (char e: s) {
         if (currstatus < 3) {
-            if (e == ' ' || e == ']' || e == ',') {
+            if (e == ']') {
                 continue;
             } else if (e == '[') {
                 if (currstatus == 1) {
@@ -138,12 +138,12 @@ void Game::startGame() {
     homepage.run(std::cin, std::cout);
 
     if (difficulty == 1) {
-        initializeStoryline("storylineFiles/test1.txt");
+        initializeStoryline("storylineFiles/hard.txt");
     } else {
-        initializeStoryline("storylineFiles/test1.txt");
+        initializeStoryline("storylineFiles/easy.txt");
     }
 
-
+    
     CharacterSelectionUI charselect(ourCharacter); //.run, which calls .askGender, .askWeapon, etc.
     charselect.run(std::cin, std::cout);
 
