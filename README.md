@@ -92,18 +92,18 @@ The end game screen would output the end game message.
  > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
-> If you enter invalid input
+> If you enter invalid input: <br />
 > <img width="595" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/267a37b7-0cbd-445f-a12f-7f328a2f744d">
-> If you enter spaces in invalid input
+> If you enter spaces in invalid input: <br />
 > <img width="563" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/64f50f89-0145-477e-99d2-787d55f849d1">
-> When you repeatedly enter invalid input:
+> When you repeatedly enter invalid input: <br />
 > <img width="586" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/bd2482df-a52b-4b52-a96b-f23418f970de">
-> The storyline:
+> The storyline: <br />
 > <img width="711" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/4e03d19c-8ea0-4a59-8128-7c1cec6cead3">
-> Dying:
+> Dying:<br />
 > <img width="564" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/18671297-b7da-4fff-8e55-4c040263ea3d">
-> Taken POW:
-> <img width="700" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/3fbd5dd9-52c0-4b18-a660-8ac746ae6c5e">
+> Taken POW: <br />
+> <img width="700" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/3fbd5dd9-52c0-4b18-a660-8ac746ae6c5e"> <br />
 
 
 
