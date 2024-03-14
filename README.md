@@ -60,6 +60,9 @@ The end game screen would output the end game message.
 
 ## Class Diagram
 > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from this template)
+> Final version:
+> <img width="600" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/477f62f1-1067-4345-b67b-6a9b5d202948">
+> Ignore this:
 > ![image](https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/9c88684c-fbe9-40cd-9980-3f6b0676097b)
 > ![image](https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/2a671e5e-b6a1-47f1-a0af-4d04b6807386)
 
