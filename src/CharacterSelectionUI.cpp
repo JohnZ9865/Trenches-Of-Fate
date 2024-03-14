@@ -15,20 +15,22 @@ void CharacterSelectionUI::askName(istream& input, ostream& output) { // does no
 
 void CharacterSelectionUI::askGender(istream& input, ostream& output) { // does not affect gameplay
     string gender_input;
-    output << "Enter your character's gender. Type M for male and F for female." << endl;
+    output << "Enter your character's gender. Enter any gender." << endl;
 
     std::getline(input, gender_input);
-
-    if (gender_input == "M") {
-        thischar->setGender(gender_input);
-    }
-    else if (gender_input == "F") {
-        thischar->setGender(gender_input);
-    } else {
-        output << "This gender does not exist. You're now set to male." << endl;
-        gender_input = "M";
-        thischar->setGender(gender_input);
-    }
+    thischar->setGender(gender_input);
+    
+    // if (gender_input == "M") {
+    //     thischar->setGender(gender_input);
+    // }
+    // else if (gender_input == "F") {
+    //     thischar->setGender(gender_input);
+    // } else {
+    //     // Removed this option.
+    //     // output << "This gender does not exist. You're now set to male." << endl;
+    //     // gender_input = "M";
+    //     thischar->setGender(gender_input);
+    // }
 }
 
 void CharacterSelectionUI::askRank(istream& input, ostream& output) { // does not affect gameplay
