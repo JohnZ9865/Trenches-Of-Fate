@@ -50,7 +50,8 @@ Character Selection Menu:
 The player can either create a new character or select their saved character from before. After selecting which one (by entering an integer or a char), the player can play the game.
 
 Storytelling:
-This screen would start with a general storyline. Depending on the position/role from the character they have created, the player would have an unique storyline being outputted. The user enters a y or n when given an event to dictate what happens next in the game. 
+This screen would start with a general storyline. Depending on the difficulty, the player would be given a storyline and would have to make choices. 
+The storyline can be modified through the textfile that's parsed in a specific format and way to create the full graph.
 
 
 
