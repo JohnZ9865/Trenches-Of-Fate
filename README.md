@@ -94,6 +94,16 @@ The end game screen would output the end game message.
  
  ## Screenshots
  > Screenshots of the input/output after running your application
+> <img width="595" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/267a37b7-0cbd-445f-a12f-7f328a2f744d">
+<img width="563" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/64f50f89-0145-477e-99d2-787d55f849d1">
+<img width="534" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/533cd422-de0a-468f-9578-20651c7dadfa">
+<img width="711" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/4e03d19c-8ea0-4a59-8128-7c1cec6cead3">
+<img width="564" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/18671297-b7da-4fff-8e55-4c040263ea3d">
+<img width="700" alt="image" src="https://github.com/cs100/final-project-wchen308-flu018-szhou110-sxiao027/assets/64669569/3fbd5dd9-52c0-4b18-a660-8ac746ae6c5e">
+
+
+
+
  ## Installation/Usage
  > To run the application, run "cmake .", then "make", then "./rungame".
  ## Testing
