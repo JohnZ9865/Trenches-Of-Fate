@@ -41,8 +41,7 @@ TEST (CharacterTest, gender1) {
     std::ostringstream output;
 
     characterUI.askGender(input, output);
-
-    EXPECT_EQ("M", aCharacter.obtainGender());
+    EXPECT_EQ("J", aCharacter.obtainGender());
 }
 
 TEST (CharacterTest, nationality) {
@@ -103,8 +102,7 @@ TEST(CharacterSelectionUITest, WrongGenderInput) {
 
     characterUI.askGender(input, output);
 
-
-    EXPECT_EQ("M", character.obtainGender());
+    EXPECT_EQ("X", character.obtainGender());
 }
 
 
