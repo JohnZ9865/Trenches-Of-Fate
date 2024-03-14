@@ -111,5 +111,5 @@ The end game screen would output the end game message.
  ## Installation/Usage
  > To run the application, run "cmake .", then "make", then "./rungame".
  ## Testing
- > How was your project tested/validated? For us, we had unit test for every single class, whether its the UIs, graph, event, game, or anything else. We aim for 100 percent code coverage on every single method, and 80 percent code coverage overall in the program in case that's not achievable.
+ > For us, we had unit test for every single class, whether its the UIs, graph, event, game, or anything else. We aim for 100 percent code coverage on every single method, and 80 percent code coverage overall in the program in case that's not achievable. We tested using gtest in c++ with the help of cmake. To run testing, run "cmake .", "make", then "testrun", "test_eg", or whatever other tests you wanna run.
  
