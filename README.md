@@ -3,11 +3,10 @@
 ## Project Name: Trenches of Fate: A WWI Story Adventure Game
 
 ## Project Description
-> Our project, "Trenches of Fate," is a text-based story game set in the grim backdrop of World War I. Players take on the role of an ordinary German soldier, grappling with battle fatigue, who is compelled by their lieutenant to charge over the top and navigate the treacherous French trenches. The game unfolds as the player attempts to survive this harrowing ordeal, with every decision impacting the storyline.
+> Our project, "Trenches of Fate," is a text-based story game set in the grim backdrop of World War I. Players take on the role of an ordinary British or Russian soldier, grappling with battle fatigue, who is compelled by their lieutenant to repeatedly conduct dangerous actions. The game unfolds as the player attempts to survive this harrowing ordeal, with every decision impacting the storyline. 
 
 ## Why is it important or interesting to you?
 > "Trenches of Fate" draws inspiration from renowned WWI literature such as "All Quiet on the Western Front." The game offers an immersive experience, allowing players to explore the human side of war, make impactful decisions, and witness the consequences of their choices.
-
 
 ## What languages/tools/technologies do you plan to use? (This list may change over the course of the project)
 > The project will be developed using C++ and CMake. The game would be ran from the command line, with a storyline represented by a graph. Input and output will be managed through the terminal, providing a classic and straightforward interface for users to engage with the game. The game would be ran from the command line, with a storyline represented by a graph. Each plotpoint is represented by a node. An “at” pointer points to the current node/plotpoint the player is at. When the player arrives at a plotpoint, the terminal would print out what’s happening in the story, and which keys the user should press to make decisions on what his character should do. When the user makes a choice, the “current” pointer and move onto the corresponding plotpoint and the node in the graph. For example, the current plotpoint may be “your officer had ordered you to go over the top, but the machine gun fire had just show down the last person who did so. You can either press 1. Go over the top, or 2. Argue with with commander.” If a choice is made to go over the top,, the “at” pointer will move onto the node corresponding to the outcome of going over the top. 
