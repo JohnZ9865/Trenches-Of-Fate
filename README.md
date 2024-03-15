@@ -85,7 +85,9 @@ The end game screen would output the end game message.
 
 
  ## Installation/Usage
- > To run the application, run "cmake .", then "make", then "./rungame".
+
+ > Go to the green button on github, that says code, take the link, run "git clone --recursive <link here>" once you reach the place that you want to install it in.
+>  > To run the application, go into vs code, enter the project directory, run "cmake .", then "make", then "./rungame".
  ## Testing
  > For us, we had unit test for every single class, whether its the UIs, graph, event, game, or anything else. We aim for 100 percent code coverage on every single method, and 80 percent code coverage overall in the program in case that's not achievable. We tested using gtest in c++ with the help of cmake. To run testing, run "cmake .", "make", then "testrun", "test_eg", or whatever other tests you wanna run.
  
