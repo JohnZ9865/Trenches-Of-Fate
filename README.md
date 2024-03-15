@@ -18,17 +18,7 @@
 > The project is based off a story game where each decision made by the user changes the story in some way for different results. The user would be able to first choose character, weapon, rank, nationality, etc. The user will be able to choose between easy and hard mode, with the hard mode being harder to survive than easy mode. Through pressing certain keys as directed by the game, the user will be able to start the game and make choices throughout the game as they face decisions in the story line (which would look closer to a Directed Acylic Graph than an actual "line"). The story line would diverge depending on the decisions that had been taken. The character could be shot at, killed by shells, executed by his officer, or manage to survive for another day. An endgame screen would appear, announcing that the player had died. In addition, there's also an option to increase or decrease the difficulty, which would make the story easier or harder for the player to survive.
 > Another backend feature that the project provides is the dynamic generation of the storyline from a text file: The text file will have each line be in the format of [prompttext] [eventtext] [linked events(0 indexed)], from which a storyline can be dynamically generated using a meticulously made string parser that parses individual lines and characters. This would allow for developers who're not familiar with the tech stack to easily change or update the storyline without having to know how the program itself works.
 
- > ## Phase II
- > In addition to completing the "User Interface Specification" and "Class Diagram" sections below, you will need to:
- > * Create an "Epic" (note) for each feature. Place these epics in the `Product Backlog` column
- > * Complete your first *sprint planning* meeting to plan out the next 7 days of work.
- >   * Break down the "Epics" into smaller actionable user stories (i.e. smaller development tasks). Convert them into issues and assign them to team members. Place these in the `TODO` column (aka Sprint Backlog).
- >   * These cards should represent roughly 7 days worth of development time for your team. Then, once the sprint is over you should be repeating these steps to plan a new sprint, taking you until your second scrum meeting with the reader in phase III.
- > * Schedule two check-ins using Calendly. Both time slots should be during your lab on week 6. Your entire team must be present for both check-ins.
- >   * The first check-in needs to be scheduled with your lab TA. During that meeting, you will discuss your project design/class diagram from phase II.
- >   * The second check-in should be scheduled with a reader. During that meeting you will discuss:
- >     * The tasks you are planning for the first sprint
- >     * How work will be divided between the team members
+
 ## User Interface Specification
  > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from [this template](https://redirect.cs.umbc.edu/~mgrass2/cmsc345/Template_UI.doc))
 
