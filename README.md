@@ -72,20 +72,6 @@ The end game screen would output the end game message.
 > The Event class: The event class stores the text of event, and options which is a vector of pointers which points to the next events that could occur based off user decisions. runEvent() is the most important, it will display the text of the event, alongside the prompt of what options you can pick. It is called by runCurrentEvent of the graph class, and returns an integer --- 0 meaning the game has ended, 1 means the game did not end. The runCurrentEvent itself is called inside the startGame() method of Game class, which runs on a while loop that continously runs the current event, takes in input, etc.
 > Game Class: The game class contains the character and the storyline. To start a game, create the game object. The game object constructor will ask you for the difficulty of the game. Once that's done, startGame function can be called. The story line is hardcoded inside the "initializeStoryline" of the game class, with "initializeStoryline" called by the constructor. 
  
- > ## Phase III
- > You will need to schedule a check-in for the second scrum meeting with the same reader you had your first scrum meeting with (using Calendly). Your entire team must be present. This meeting will occur on week 8 during lab time.
- 
- > BEFORE the meeting you should do the following:
- > <Add new uml diagram here>
- > The reason for all the changes: We had to basically create a whole new series of UI classes from scratch, because after talking to the professor, we realized that we needed to make our program abide by solid principles by separating the printing and taking in input, which was a part of our graph and event classes, to become their whole new own classes. In the past we were violating the solid principles of single responsibility principle by having the graph and event class be not only about the graph and event, but also about printing and taking in inputs.
- > * Perform a new sprint plan like you did in Phase II.
- > * You should also make sure that your README file (and Project board) are up-to-date reflecting the current status of your project and the most recent class diagram. Previous versions of the README file should still be visible through your commit history.
- 
-> During the meeting with your reader you will discuss: 
- > * How effective your last sprint was (each member should talk about what they did)
- > * Any tasks that did not get completed last sprint, and how you took them into consideration for this sprint
- > * Any bugs you've identified and created issues for during the sprint. Do you plan on fixing them in the next sprint or are they lower priority?
- > * What tasks you are planning for this next sprint.
 
  
  > ## Final deliverable
