@@ -18,6 +18,9 @@
 > The project is based off a story game where each decision made by the user changes the story in some way for different results. The user would be able to first choose character, weapon, rank, nationality, etc. The user will be able to choose between easy and hard mode, with the hard mode being harder to survive than easy mode. Through pressing certain keys as directed by the game, the user will be able to start the game and make choices throughout the game as they face decisions in the story line (which would look closer to a Directed Acylic Graph than an actual "line"). The story line would diverge depending on the decisions that had been taken. The character could be shot at, killed by shells, executed by his officer, or manage to survive for another day. An endgame screen would appear, announcing that the player had died. In addition, there's also an option to increase or decrease the difficulty, which would make the story easier or harder for the player to survive.
 > Another backend feature that the project provides is the dynamic generation of the storyline from a text file: The text file will have each line be in the format of [prompttext] [eventtext] [linked events(0 indexed)], from which a storyline can be dynamically generated using a meticulously made string parser that parses individual lines and characters. This would allow for developers who're not familiar with the tech stack to easily change or update the storyline without having to know how the program itself works.
 
+## Enforcement of solid principles
+> Originally, we had the prinouts bundled with the event class. However, this was a violation of the SRP, and as a result we had to create a UI for each of the screen.
+
 
 ## User Interface Specification
  > Include a navigation diagram for your screens and the layout of each of those screens as desribed below. For all the layouts/diagrams, you can use any tool such as PowerPoint or a drawing program. (Specification requirement is adapted from [this template](https://redirect.cs.umbc.edu/~mgrass2/cmsc345/Template_UI.doc))
@@ -63,13 +66,6 @@ The end game screen would output the end game message.
 > Game Class: The game class contains the character and the storyline. To start a game, create the game object. The game object constructor will ask you for the difficulty of the game. Once that's done, startGame function can be called. The story line is hardcoded inside the "initializeStoryline" of the game class, with "initializeStoryline" called by the constructor. 
  
 
- 
- > ## Final deliverable
- > All group members will give a demo to the reader during lab time. ou should schedule your demo on Calendly with the same reader who took your second scrum meeting. The reader will check the demo and the project GitHub repository and ask a few questions to all the team members. 
- > Before the demo, you should do the following:
- > * Complete the sections below (i.e. Screenshots, Installation/Usage, Testing)
- > * Plan one more sprint (that you will not necessarily complete before the end of the quarter). Your In-progress and In-testing columns should be empty (you are not doing more work currently) but your TODO column should have a full sprint plan in it as you have done before. This should include any known bugs (there should be some) or new features you would like to add. These should appear as issues/cards on your Project board.
- > * Make sure your README file and Project board are up-to-date reflecting the current status of your project (e.g. any changes that you have made during the project such as changes to your class diagram). Previous versions should still be visible through your commit history. 
  
  ## Screenshots
 > If you enter invalid input: <br />
